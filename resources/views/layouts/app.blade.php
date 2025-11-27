@@ -39,13 +39,19 @@
             </li>
 
             <li class="p-3 hover:bg-gray-700">
-                <a href="#" class="flex items-center gap-3">
+                <a href="{{ route('category.index') }}" class="flex items-center gap-3">
                     <i class="fa-solid fa-list"></i> Category
                 </a>
             </li>
 
             <li class="p-3 hover:bg-gray-700">
-                <a href="#" class="flex items-center gap-3">
+                <a href="{{ route('unit.index') }}" class="flex items-center gap-3">
+                    <i class="fa-solid fa-users"></i> Unit
+                </a>
+            </li>
+
+            <li class="p-3 hover:bg-gray-700">
+                <a href="{{ route('product.index') }}" class="flex items-center gap-3">
                     <i class="fa-solid fa-box"></i> Product
                 </a>
             </li>
@@ -73,6 +79,18 @@
                     <i class="fa-solid fa-cart-plus"></i> Purchase Products
                 </a>
             </li>-->
+
+            <li class="p-3 hover:bg-gray-700">
+                <a href="{{route('adjuststockin.index')}}" class="flex items-center gap-3">
+                    <i class="fa-solid fa-cart-plus"></i> Stock In Products
+                </a>
+            </li>
+
+            <li class="p-3 hover:bg-gray-700">
+                <a href="{{ route('report.stockin') }}" class="flex items-center gap-3">
+                    <i class="fa-solid fa-right-left"></i> Report Stock In
+                </a>
+            </li>
 
             <li class="p-3 hover:bg-gray-700">
                 <a href="{{route('profile.users')}}" class="flex items-center gap-3">
