@@ -16,7 +16,6 @@ class ProfileController extends Controller
     public function users()
     {
         return view('profile.users',['users' => User::all()]);
-
     }
     /**
      * Display the user's profile form.
