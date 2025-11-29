@@ -15,7 +15,6 @@ class ProductController extends Controller
 {
     // LIST ALL PRODUCTS
     public function index()
-    {
         $product = Product::with(['unit', 'category'])->latest()->paginate(5);
         return view('product.index', compact('product'));
     }

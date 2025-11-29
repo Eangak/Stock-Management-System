@@ -38,23 +38,16 @@
                     <td class="p-2 border">{{ $p->category->name }}</td>
                     <td class="p-2 border">{{ $p->remark }}</td>
 
-                    <td class="p-2 border">
-                        <div class="flex items-center space-x-3">
-                            <a href="{{ route('product.edit', $p->id) }}"
-                               class="text-blue-600 hover:underline">
-                                Edit
-                            </a>
+                    
+                    <td class="p-2 border flex space-x-3">
+                        <a href="{{ route('product.edit', $p->id) }}" class="text-blue-600">Edit</a>
 
-                            <form action="{{ route('product.destroy', $p->id) }}" 
-                                  method="POST"
-                                  onsubmit="return confirm('Delete this product?');">
-                                @csrf
-                                @method('DELETE')
-                                <button class="text-red-600 hover:underline">
-                                    Delete
-                                </button>
-                            </form>
-                        </div>
+                        <form action="{{ route('product.destroy', $p->id) }}" method="POST"
+                              onsubmit="return confirm('Delete this product?');">
+                            @csrf
+                            @method('DELETE')
+                            <button class="text-red-600">Delete</button>
+                        </fo
                     </td>
 
                 </tr>
@@ -62,10 +55,11 @@
             </tbody>
         </table>
 
+
         <div class="mt-4">
             {{ $product->links('pagination::bootstrap-5') }}
         </div>
-
+        
     </div>
 
 </x-app-layout>
