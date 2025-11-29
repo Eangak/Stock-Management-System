@@ -38,6 +38,7 @@
                     <td class="p-2 border">{{ $p->category->name }}</td>
                     <td class="p-2 border">{{ $p->remark }}</td>
 
+                    
                     <td class="p-2 border flex space-x-3">
                         <a href="{{ route('product.edit', $p->id) }}" class="text-blue-600">Edit</a>
 
@@ -46,13 +47,19 @@
                             @csrf
                             @method('DELETE')
                             <button class="text-red-600">Delete</button>
-                        </form>
+                        </fo
                     </td>
 
                 </tr>
                 @endforeach
             </tbody>
         </table>
+
+
+        <div class="mt-4">
+            {{ $product->links('pagination::bootstrap-5') }}
+        </div>
+        
     </div>
 
 </x-app-layout>
